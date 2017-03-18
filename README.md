@@ -90,7 +90,7 @@ spark-submit\
 
 ## Viewing The Data
 
-To view the bulk loaded trips, we will extend [ArcGIS](https://pro.arcgis.com/en/pro-app/) with an [ArcPy](http://pro.arcgis.com/en/pro-app/arcpy/get-started/what-is-arcpy-.htm) Toolbox to query MemSQL and view the result set as features on a map.
+To view the bulk loaded trips, we will extend [ArcGIS Pro](https://pro.arcgis.com/en/pro-app/) with an [ArcPy](http://pro.arcgis.com/en/pro-app/arcpy/get-started/what-is-arcpy-.htm) Toolbox to query MemSQL and view the result set as features on a map.
 The protocol used by a client application to communicate with a MemSQL cluster is same as [MySQL](https://www.mysql.com/), enabling us to use a plethora of existing libraries. This is very smart from the MemSQL folks for _not_ inventing yet another protocol.  Since ArcPy is based on Python, we will use [PyMySQL](http://pymysql.readthedocs.io/en/latest/index.html) as it is ([conda](https://www.continuum.io/anaconda-overview)) installed in ArcGIS Pro.
 
 ![](media/Packages.png)
