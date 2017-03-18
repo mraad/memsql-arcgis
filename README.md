@@ -74,13 +74,13 @@ The GeoEnrichment steps are:
 
 Compile the Spark/Scala application using [Apache Maven](https://maven.apache.org/):
 
-```
+```bash
 mvn clean package
 ```
 
 The following is a sample job submission where the input CSV file reside in an S3 bucket:
 
-```
+```bash
 spark-submit\
  --conf spark.app.access.key=${AWS_ACCESS_KEY_ID}\
  --conf spark.app.secret.key=${AWS_SECRET_ACCESS_KEY}\
@@ -103,7 +103,7 @@ The ArcPy `MemSQLToolbox` consists of 3 tools; QueryTrips, TripDensity, HexDensi
 
 This tool executes the following SQL:
 
-```
+```sql
     select
     ploc,
     pdate,
@@ -128,7 +128,7 @@ The result set of the trip pickup locations is used to create point features tha
 
 This tool executes the following nested SQL:
 
-```
+```sql
     select
     T.C*{c1}+{c2} as X,
     T.R*{c1}+{c2} as Y,
@@ -148,7 +148,7 @@ Imagine a virtual mesh draped over Manhattan where each mesh cell is a square wi
 
 This tool executes the following SQL:
 
-```
+```sql
     select p100 as rc,count(p100) as pop
     from trips
     where {w}
