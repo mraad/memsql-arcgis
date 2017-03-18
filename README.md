@@ -74,13 +74,13 @@ The GeoEnrichment steps are:
 
 Compile the Spark/Scala application using [Apache Maven](https://maven.apache.org/):
 
-```bash
+```shell
 mvn clean package
 ```
 
 The following is a sample job submission where the input CSV file reside in an S3 bucket:
 
-```bash
+```shell
 spark-submit\
  --conf spark.app.access.key=${AWS_ACCESS_KEY_ID}\
  --conf spark.app.secret.key=${AWS_SECRET_ACCESS_KEY}\
