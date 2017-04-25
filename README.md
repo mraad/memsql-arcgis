@@ -85,7 +85,7 @@ spark-submit\
  --conf spark.app.access.key=${AWS_ACCESS_KEY_ID}\
  --conf spark.app.secret.key=${AWS_SECRET_ACCESS_KEY}\
  --conf spark.app.input.path=s3a://mraad-taxis/trips-1M.csv\
- target/memsql-arcgis-0.1-jar-with-dependencies.jar
+ target/memsql-arcgis-0.2-jar-with-dependencies.jar
 ```
 
 ## Viewing The Data

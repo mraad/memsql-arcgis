@@ -4,7 +4,7 @@
 
     <groupId>com.esri</groupId>
     <artifactId>memsql-arcgis</artifactId>
-    <version>0.1</version>
+    <version>0.2</version>
     <packaging>jar</packaging>
 
     <name>memsql-arcgis</name>
@@ -18,7 +18,7 @@
     <dependencies>
         <dependency>
             <groupId>com.memsql</groupId>
-            <artifactId>memsql-connector_2.11</artifactId>
+            <artifactId>memsql-connector_${scala.compact}</artifactId>
             <version>2.0.0</version>
         </dependency>
         <dependency>
@@ -34,8 +34,8 @@
         </dependency>
         <dependency>
             <groupId>com.esri</groupId>
-            <artifactId>webmercator</artifactId>
-            <version>1.0</version>
+            <artifactId>webmercator_${scala.compact}</artifactId>
+            <version>1.2</version>
         </dependency>
         <dependency>
             <groupId>com.esri</groupId>
@@ -151,7 +151,7 @@
 
     <profiles>
         <profile>
-            <id>spark-2.1</id>
+            <id>spark-provided</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -162,7 +162,7 @@
             </properties>
         </profile>
         <profile>
-            <id>IntelliJ</id>
+            <id>spark-compile</id>
             <properties>
                 <spark.version>2.1.0</spark.version>
                 <spark.scope>compile</spark.scope>

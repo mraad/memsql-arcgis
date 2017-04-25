@@ -1,7 +1,7 @@
 package com.esri
 
 import com.esri.hex.HexGrid
-import com.esri.mercator._
+import com.esri.webmercator._
 import com.memsql.spark.connector._
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.catalyst.ScalaReflection
