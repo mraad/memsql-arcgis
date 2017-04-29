@@ -110,9 +110,11 @@ class QueryTool(BaseTool):
         self.canRunInBackground = True
 
     def getParameterInfo(self):
-        return [self.param_where(),
-                self.param_name(value="trips"),
-                self.param_fc()]
+        return [
+            self.param_fc(),
+            self.param_name(value="trips"),
+            self.param_where()
+        ]
 
     def execute(self, parameters, messages):
         name = parameters[1].value
@@ -186,7 +188,7 @@ class QueryTool(BaseTool):
         finally:
             connection.close()
         arcpy.ResetProgressor()
-        parameters[2].value = fc
+        parameters[0].value = fc
 
 
 class DensityTool(BaseTool):
